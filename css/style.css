@@ -65,12 +65,13 @@ h3{
 .header_carousel .carousel-inner>.item{
 	height: 715px;
 }
-.header_carousel .bg{
+.bg{
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 	width: 100%;
 	height: 100%;
+	position: absolute;
 }
 .header_carousel .carousel-caption{
 	top: 290px;
@@ -171,7 +172,7 @@ h3{
 
 /*-------Wrapper Styles-------*/
 .wrapper{
-	padding: 0 120px;
+	padding: 0;
 }
 
 /*-------H lorem Styles-------*/
@@ -194,25 +195,30 @@ h3{
 /*-------Main Styles-------*/
 
 .main{
-	padding-left: 40px;
+	padding-left: 55px;
 }
 .main h3{
 	margin-bottom: 52px;
 }
 .main .card{
 	height: 440px;
-	width: 225px;
 	background: #fff;
-	margin: 0 15px;
+	margin-right: 30px;
+	margin-left: 0;
 	padding: 0;
 	text-align: center;
 	position: relative;
+	padding: 0 10px;
 }
 
-.main .card img{
+.main .card figure{
 	height: 220px;
 	margin: auto;
 	margin-top: 16px;
+}
+.main .card figure img{
+	display: block;
+	margin: auto;
 }
 
 .main .card .card_text{
@@ -256,20 +262,42 @@ h3{
 .main .active img{
 	opacity: 0.42;
 }
-.main .active i{
-	position: absolute;
+.main .active .icon{
 	color: #909090FF;
-	top: 14px;
-    left: 194px;
+	text-align: right;
 }
-.main .row:nth-of-type(3){
-	margin-top: 30px;
+.main .row:nth-of-type(2){
+	margin-bottom: 30px;
+}
+
+main .sale{
+	padding-right: 0;
+	padding-left: 0;
+	margin-right: 30px;
 }
 
 /*------Aside styles-----*/
 .aside{
-	padding-right: 25px;
+	padding-right: 0;
+	padding-left: 0;
+	margin-right: 0;
 	border-right: 3px solid #DADADAFF;
+}
+.aside .row{
+	margin-right: 0;
+	margin-left: 0;
+}
+.aside .aside_categories, .aside .aside_brands{
+	margin: 0;
+	padding: 0;
+	border-bottom: 3px solid #DADADAFF;
+}
+.aside .aside_brands{
+	margin-bottom: 30px;
+}
+.aside .aside_carousel, .aside .aside_banner{
+	padding-left: 0;
+	padding-right: 25px;
 }
 .nav-pills>li.active>a, .nav-pills>li.active>a:hover{
 	background: none;
@@ -281,16 +309,24 @@ h3{
 }
 .nav-pills>li:last-of-type>a{
 	color: #9ABDD9FF;
+	padding-bottom: 30px;
 }
 .aside_carousel{
-	height: 500px;
+	min-height: 470px;
+}
+.aside_carousel_top{
+	width: 225px;
+}
+.aside_carousel .carousel{
+	min-height: 470px;
 }
 .aside_carousel .carousel-caption{
-	position: relative;
+	position: absolute;
 	background: #fff;
 	left: 0;
 	text-shadow: none;
-	padding-bottom: 20px;
+	top: 300px;
+	height: 130px;
 }
 .aside_carousel .carousel-caption h4{
 	font-size: 14px;
@@ -306,24 +342,22 @@ h3{
 }
 
 .aside_carousel .carousel-indicators{
-	bottom: -454px;
+	bottom: 0;
 	left: 0;
 	background: white;
     border-top: 2px solid #ECECECFF;
     margin-left: 0;
     width: 100%;
     padding: 5px 0;
-    position: relative;
-
-
+    position: absolute;
 }
 .aside_carousel  .carousel-inner img{
-	width: 100%;
+	object-fit: cover;
+	height: 304px;
 }
-.aside_carousel_top{
-	height: 500px;
+.aside_carousel  .carousel-inner{
+	overflow: visible;
 }
-
 .aside_carousel .carousel-indicators .active{
 	background-color: #5E5E5EFF;
 }
@@ -348,6 +382,9 @@ h3{
 	text-color: #1697B3FF;
 }
 
+.aside_carousel .item{
+	height: 304px;
+}
 /*-----Mailing styles------*/
 .mailing{
 	background-color: #F5F5F5FF;
