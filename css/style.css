@@ -174,6 +174,9 @@ h3{
 .wrapper{
 	padding: 0;
 }
+.wrapper .row{
+	margin-right: 0;
+}
 
 /*-------H lorem Styles-------*/
 .h_lorem{
@@ -201,13 +204,15 @@ h3{
 	margin-bottom: 52px;
 }
 .main .card{
-	height: 440px;
-	background: #fff;
-	margin-right: 30px;
+
 	margin-left: 0;
 	padding: 0;
 	text-align: center;
 	position: relative;
+	padding: 0 10px;
+}
+.main .card .panel{
+	height: 440px;
 	padding: 0 10px;
 }
 
@@ -219,11 +224,12 @@ h3{
 .main .card figure img{
 	display: block;
 	margin: auto;
+
 }
 
 .main .card .card_text{
 	text-align: center;
-	height: 86px;
+	
 }
 .main .card .card_text h4{
 	color: #000000;
@@ -234,9 +240,15 @@ h3{
 .main .card .card_text p{
 	color: #000000;
 }
-
+.main .card .button_price{
+	position: absolute;
+	bottom: 30px;
+	width: auto;
+	right: 0;
+	left: 0;
+}
 .main .card button{
-	box-shadow: 0 0 0 rgba(0, 0, 0, 0.38);
+	box-shadow: 0 0 1px rgba(0,0,0, 0.38), 0 0 1px rgba(0,0,0, 0.38);
 	color: #000000;
 	font-size: 14px;
 	text-transform: uppercase;
@@ -262,26 +274,40 @@ h3{
 .main .active img{
 	opacity: 0.42;
 }
-.main .active .icon{
+.main .active i{
 	color: #909090FF;
-	text-align: right;
+	position: absolute;
+	top: 10px;
+	right: 20px;
+
+}
+.main .card .sale-icon{
+	position: absolute;
+    border-radius: 55%;
+    border: 1.5px solid #CDCDCDFF;
+    top: 13px;
+    left: 25px;
+    padding: 11px 6px;
+}
+.main .card .sale-icon p{
+	margin: 0;
+    text-transform: uppercase;
+    font-size: 12px;
 }
 .main .row:nth-of-type(2){
 	margin-bottom: 30px;
 }
 
-main .sale{
-	padding-right: 0;
-	padding-left: 0;
-	margin-right: 30px;
-}
 
 /*------Aside styles-----*/
 .aside{
-	padding-right: 0;
-	padding-left: 0;
-	margin-right: 0;
 	border-right: 3px solid #DADADAFF;
+	padding-right: 0;
+}
+.aside_wrapper{
+	width: auto;
+	margin-left: 135px;
+	padding-right: 0;
 }
 .aside .row{
 	margin-right: 0;
@@ -313,6 +339,7 @@ main .sale{
 }
 .aside_carousel{
 	min-height: 470px;
+	margin-bottom: 10px;
 }
 .aside_carousel_top{
 	width: 225px;
@@ -327,6 +354,8 @@ main .sale{
 	text-shadow: none;
 	top: 300px;
 	height: 130px;
+	bottom: -130px;
+	width: 100%;
 }
 .aside_carousel .carousel-caption h4{
 	font-size: 14px;
@@ -373,10 +402,26 @@ main .sale{
 }
 .aside_banner .text_wrapper{
 	background: white;
-	width: 80%;
+	width: 100%;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 35px 10px;
 }
 .aside_banner .text_wrapper h3{
 	margin-top: 0;
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+.aside_banner .text_wrapper span{
+	font-size: 28px;
+	font-weight: 700;
+}
+.aside_banner .text_wrapper .btn{
+	padding: 6px 30px;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: 700;
 }
 .aside_banner .text_wrapper p::last-of-type{
 	text-color: #1697B3FF;
@@ -385,16 +430,55 @@ main .sale{
 .aside_carousel .item{
 	height: 304px;
 }
-/*-----Mailing styles------*/
-.mailing{
-	background-color: #F5F5F5FF;
-	padding: 20px 120px;
+.aside_wrapper .about{
+	margin-bottom: 50px;
 }
-.mailing .container{
-	padding: 0;
-	margin: 0;
+.aside_wrapper .about h3{
+	margin-top: 30px;
 }
 
+/*-----Mailing styles------*/
+
+.mailing{
+	background-color: #F5F5F5FF;
+	padding: 45px 0;
+}
+.mailing .container{
+	margin-right: 0;
+	margin-left: 150px;
+}
+.mailing .mailing_section{
+	padding-right: 0;
+}
+
+.mailing .form-control {
+	padding: 20px;
+	width: 230px;
+}
+.mailing button{
+	padding: 18px 45px;
+	background-color: #e77553;
+	font-size: 17px;
+	color: #fff;
+
+}
+.mailing p span{
+	font-size: 24px;
+	color: #000000;
+}
+
+.mailing_section input {
+	height: 100%;
+
+}
+.mailing_section button{
+	
+}
+
+.mailing .form-inline .form-group{
+	margin-right: 15px;
+	margin-bottom: 15px;
+}
 
 
 /*----Footer styles----*/
@@ -441,6 +525,20 @@ main .sale{
 		width: 200px;
 		z-index: 3;
 	}
+	.header_bottom_nav .navbar-inverse .navbar-brand{
+		height: 70px;
+	}
+	.header_bottom_nav .navbar-inverse .navbar-brand span{
+		font-size: 24px;
+		padding-top: 24px;
+	}
+	.navbar-brand>img{
+		width: auto;
+		height: 100px;
+	}
+	.header_bottom_nav .navbar-inverse .navbar-toggle{
+		padding: 20px 10px;
+	}
 	
 }
 
@@ -451,10 +549,112 @@ main .sale{
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
-	
+	.header_bottom_nav .navbar-inverse .navbar-brand span{
+		font-size: 24px;
+		padding-top: 27px;
+	}
+	.header_carousel .carousel-caption h1{
+		font-size: 35px;
+	}
+	.header_carousel .carousel-caption h3{
+		font-size: 24px;
+	}
+	.header_carousel .carousel-caption .btn-red{
+		font-size: 18px;
+		padding: 9px 0;
+	}
+	.description{
+		min-height: 100px;
+		line-height: 100px;
+	}
+	.description p {
+		font-size: 18px;
+	}
+	.main .sale figure{
+		margin-bottom: 30px;
+	}
+	.main .sale:last-of-type>figure{
+		margin-bottom: 0;
+	}
+	.input-group-btn:last-child>.btn{
+		margin-left: 135px;
+	}
+	.navbar-brand {
+		height: 100px;
+	}
+	.form-group{
+		width: 100%;
+		margin-bottom: 15px;
+	}
+	.mailing .form-control {
+		width: 100%;
+	}
+	.mailing .container{
+		padding-right: 30px;
+		padding-left: 30px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	.mailing .mailing_section {
+		padding-right: 15px;
+	}
+	.mailing .wrapper_mailing{
+		margin-left: 0;
+	}
+	.aside_wrapper{
+		margin-left: 50px;
+	}
+	.aside{
+		border-right: 0;
+	}
+	.footer .footer-top>section:nth-of-type(3), .footer .footer-top>section:nth-of-type(4){
+		margin-bottom: 20px;
+	}
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
-
+	.navbar-brand>img {
+		height: 80px;
+	}
+	.header_bottom_nav .navbar-inverse .navbar-brand span{
+		font-size: 18px;
+	}
+	.header_carousel .carousel-caption h1{
+		font-size: 24px;
+	}
+	.header_carousel .carousel-caption h3{
+		font-size: 16px;
+	}
+	.header_carousel .carousel-caption .btn-red{
+		width: 260px;
+	}
+	.header_bottom_nav .navbar-default .navbar-nav>li>a{
+		padding-top: 15px;
+    	padding-bottom: 15px;
+	}
+	.footer{
+		padding: 20px 20px;
+	}
+	.aside_wrapper{
+		margin-left: 20px;
+	}
+	.aside_wrapper .about {
+		width: 100%;
+	}
+	.aside .aside_categories, .aside .aside_brands{
+		border-bottom: 0;
+	}
+	.main h3{
+		margin-top: 25px;
+		margin-bottom: 25px;
+	}
+	.description p{
+		font-size: 14px;
+		margin-top: 25px;
+	}
+	.description{
+		min-height: 45px;
+    	line-height: 45px;
+	}
 }
