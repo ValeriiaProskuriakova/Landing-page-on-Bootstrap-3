@@ -557,6 +557,15 @@ h3{
 		font-size: 24px;
 		padding-top: 27px;
 	}
+	.header_bottom_nav .navbar .input-group-btn{
+		width: auto;
+	}
+	.header_bottom_nav .navbar-form .form-control{
+		display: block;
+	}
+	.header_bottom_nav .navbar .input-group-btn:last-child>.btn{
+		margin-left: 0;
+	}
 	.header_carousel .carousel-caption h1{
 		font-size: 35px;
 	}
